@@ -1,0 +1,30 @@
+{
+  "name": "inventorybatch",
+  "version": "1.0.0",
+  "description": "Bachelor oppgave",
+  "scripts": {
+    "live": "live-server",
+    "start": "npm run live"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klitusas/InventoryBatch.git"
+  },
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-chart.js": "^1.0.0",
+    "angular-messages": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
+  },
+    "devDependencies": {
+    "live-server": "^0.9.2"
+  },
+  "author": "Andrejus Solovjovas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klitusas/InventoryBatch/issues"
+  },
+  "homepage": "https://github.com/klitusas/InventoryBatch#readme"
+}

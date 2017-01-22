@@ -36,7 +36,7 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-var machineId = getParameterByName('device');
+var machineId = '2adc7108-cb4c-4955-a00d-06ee7b23a478'//getParameterByName('device');
 console.log(machineId);
 
 window.addEventListener('load', function() {
