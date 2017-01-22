@@ -1,0 +1,36 @@
+
+<div class="col-xs-8 col-sm-8 col-md-8">
+    <div class="col-xs-12 col-sm-12 col-md-12" col-sm-offset-3 >
+        <p><input class="form-control input-lg products rounded" placeholder="Search..." ng-model="searchKey" /></p>
+    </div>
+    <div class="section products" style="margin-left: 15px;" id="scrolling" scroll>
+        <div ng-repeat="product in Allproducts | filter:searchKey | filter:{description: 'Mckinsey'}" ng-if="$index < amount" >
+            <img class="pic products" src={{product.imageUrl}} />
+            <span>
+                <p class="text products" >{{product.name| uppercase | limitTo: 30}}{{product.name.length > 30 ? '...' : ''}} </p>
+            </span>
+            <span class="errorText animate-if" ng-if="product.errorMessage">The item is already in your list</span>
+                <a class="btn btn-primary add" href="" ng-click="insertItem(product)">ADD</a>
+        </div>
+    </div>
+</div>
+<div class="col-xs-4 col-sm-4 col-md-4" style="border-left:1px solid #00aeef">
+   <h2 style="margin-left: 15px;"> Inventory</h2>
+    <div class="listofProducts" >
+        <div ng-repeat="product in products" class="animate-repeat" > 
+        <div class="row" >
+        <div class="col-xs-8 col-sm-8 col-md-8" style="margin-left: 5px;" >
+           <p class="text list" >{{$index+1}} . {{product.name| uppercase | limitTo: 20}}{{product.name.length > 20 ? '...' : ''}}</p> 
+        </div>
+        <a class="btn btn-primary remove" href="" ng-click="removeItem(product)"><p><span class="glyphicon glyphicon-remove-sign"></span> REMOVE</p></a>
+        </div>
+             <hr>
+        </div>
+    </div>
+</div>
+<!-- <div class="col-xs-12 col-sm-12 col-md-12" style="background-color: #00aeef;">
+    <div class="col-xs-12 col-sm-5 col-md-12">
+        <a class="btn btn-danger col-sm-1" href="" ng-click="exit()"><h4><span class="glyphicon exit glyphicon-log-out"></span> EXIT </h4></a>
+        <a class="btn  btn-default pull-right" href="#/inventory"><h4><span class="glyphicon glyphicon-chevron-left"></span> BACK </h4></a>
+    </div>
+</div> -->

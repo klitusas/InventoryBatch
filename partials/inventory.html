@@ -1,0 +1,76 @@
+<div >
+    <div class="section" style="margin-left: 15px;">
+        <div ng-repeat="product in products" ng-class="{selected : $index === idSelected}">
+        <span><p class="text" >{{product.name| uppercase | limitTo: 30}}{{product.name.length > 30 ? '...' : ''}}</p> </span>
+            <img class="pic" src={{product.imageUrl}} /> <!-- ng-click="hiddenDiv = !hiddenDiv;setSelected($index)"/> -->
+            <!-- <div class="section side" ng-cloak ng-show="hiddenDiv"> -->
+            <div class="section edit" style="border:none">
+            <table>
+                <tr>
+                    <td><label for="quantity">Items:</label><input type="number"  class="form-control" id="quantity" ng-value={{product.inventory}}  ng-model="x.inventoryNumber[$index]" ng-change="confirm($index);zeroItems();" ></td> <!-- ng-model="x.inventoryNumber[$index]" ng-change="confirm($index)" -->
+                    <!-- <td><label for="price">Price:</label><input type="number" class="form-control" id="price" ng-value={{product.price}} ng-model="x.prices[$index]"></td> -->
+
+
+
+                     <td><div class="section delete" ng-click="confirmDelete(product)" >
+                <span class="glyphicon glyphicon-trash"> <span class="trash" >Remove</span></span>
+                    </div> </td>
+
+            </div> 
+                </tr>
+
+            </table>
+                
+                
+            </div>
+
+
+             <!--    <form class='form '>
+                    <fieldset class="form-group">
+                        <label for="quantity">Enter quantity:</label>
+                        <input type="number" my-directive class="form-control" id="quantity" ng-value={{product.inventory}} ng-model="x.inventoryNumber[$index]">
+                    </fieldset>  -->
+                  <!--   <fieldset class="form-group">
+                        <label for="price">Enter price:</label>
+                        <input type="number" class="form-control" id="price" ng-value={{product.price}} ng-model="x.prices[$index]">
+                    </fieldset> -->
+            <!--     </form> -->
+         <!--    </div> -->
+            <!-- <span>
+            <p class="text" >{{product.name| uppercase | limitTo: 30}}{{product.name.length > 30 ? '...' : ''}}</p> 
+            </span> -->
+       <!--      <span class="glyphicon glyphicon-edit" ng-hide="hiddenDiv" ng-click="hiddenDiv = !hiddenDiv;setSelected($index)">EDIT</span>
+            <span id="save" class="glyphicon glyphicon-ok" ng-show="hiddenDiv" ng-click="confirm($index);hiddenDiv = !hiddenDiv;">Confirm</span>
+            <span id="save" class="glyphicon glyphicon-remove" ng-show="hiddenDiv" ng-click="hiddenDiv = !hiddenDiv;cancel($index)">Cancel</span>
+            <span> -->
+            <!-- <p class="inventory">{{product.inventory}} items</p> -->
+            <!-- <p class="price">{{product.price}} Kr</p>
+ -->            <!-- </span> -->
+
+          
+
+
+            <!--     <form class='form '>
+                    <fieldset class="form-group">
+                        <label for="quantity">Enter quantity:</label>
+                        <input type="number"  class="form-control" id="quantity" ng-value={{product.inventory}} ng-model="x.inventoryNumber[$index]">
+                    </fieldset>
+                 <fieldset class="form-group">
+                        <label for="price">Enter price:</label>
+                        <input type="number" class="form-control" id="price" ng-value={{product.price}} ng-model="x.prices[$index]">
+                    </fieldset> 
+                </form>
+
+            <div class="section delete" ng-click="removeItem(product)">
+                <span class="glyphicon glyphicon-remove-circle"></span>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- <div class="col-xs-12 col-sm-12 col-md-12" style="background-color: #00aeef;">
+    <div class="col-xs-12 col-sm-5 col-md-12">
+        <a class="btn btn-danger col-sm-1" href="" ng-click="exit()"><h4><span class="glyphicon exit glyphicon-log-out"></span> EXIT </h4></a>
+        <a class="btn  btn-success pull-right " href="" ng-click="save();stepPost();"><h4><span class="glyphicon glyphicon-save"></span> SAVE </h4></a>
+    </div>
+</div> -->
+
